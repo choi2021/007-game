@@ -1,0 +1,225 @@
+:root{
+    --black-color:#000000;
+    --white-color:#FFFFFF;
+
+    --border:2px solid var(--white-color);
+    --header-font:30px;
+    --logo-size:60px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.game{
+    position:relative;
+    width: 800px;
+    height: 700px;
+    background-color: var(--black-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.opening{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.opening__circle{
+    position: absolute;
+    left:0;
+    top:0;
+    background-color: var(--white-color);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    animation:moveCircle 10s ease forwards;
+}
+
+@keyframes moveCircle {
+    0%{
+        transform:none;
+    }
+    10%{
+        transform: translate(700px,0px);
+    }
+    20%{
+        transform: translate(300px,600px);
+    }
+    30%{
+        transform: translate(0px,150px);
+    }
+    40%{
+        transform:translate(315px,0px);
+    }
+    60%{
+        transform: translate(320px,260px);
+    }
+    70%{
+        transform: translate(320px,260px) scale(0.5);
+    }
+    90%{
+        transform: translate(320px,260px) scale(2) ;
+    }
+    100%{
+        transform: translate(320px,260px) scale(0);
+    }
+}
+
+
+.opening__img{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+}
+
+.start{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.start-img{
+    width: 80%;
+    height: 40%;
+    background:url(img/main.jpg) no-repeat;
+}
+
+.start-text{
+    font-size:25px;
+    color:var(--white-color);
+    display: block;
+    width:60%;
+    text-align: center;
+}
+
+.start-btn{
+    font-family: 'Bebas Neue', cursive;
+    font-size:20px;
+    cursor: pointer;
+    background-color: transparent;
+    color:var(--white-color);
+    padding:10px;
+    width:100px;
+    border:2px solid var(--white-color);
+    margin-bottom: 20px;
+}
+
+.game-main{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+
+.game__header{
+    padding:0px 20px;
+    background: var(--white-color);
+    border:2px solid var(--black-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10%;
+    width: 100%;
+}
+
+.game__logo{
+    width:var(--logo-size);
+    height: var(--logo-size);
+}
+
+.game__timer{
+    color:var(--black-color);
+    font-size:var(--header-font);
+}
+
+.game__score{
+    color:var(--black-color);
+    font-size: 24px;
+}
+
+.game-field{
+    height: 100%;
+}
+
+.game-field__horizontal{
+    position: absolute;
+    height: 1px;
+    background-color:var(--white-color);
+    width: 100%;
+}
+
+.game-field__vertical{
+    position: absolute;
+    width: 1px;
+    background-color:var(--white-color);
+    height: 100%;
+}
+
+.game-field__targetting{
+    position: absolute;
+}
+
+
+.villain{
+    background-color:var(--white-color);
+    width:50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+}
+
+.pop-up{
+    width:40%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items: center;
+    background-color:rgba(0,0,0,0.7);
+    transform: translateY(-170%);
+    border:var(--border);
+}
+
+.pop-up__refresh{
+    background:transparent;
+    border:var(--border);
+    color:white;
+    width:70px;
+    height: 70px;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.pop-up__text{
+    font-size:30px;
+    color:var(--white-color);
+}
+
+.pop-up__hide{
+    display: none;
+}
