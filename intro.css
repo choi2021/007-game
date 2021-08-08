@@ -1,0 +1,112 @@
+:root{
+    --color-black:#11100E;
+    --color-white:#FFFFFF;
+    --color-grey:#495057;
+
+    --header-icon:32px;
+    --font-large:36px;
+    --font-regular:24px;
+    --font-small:18px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin:0;
+    background-color: var(--color-black);
+    display: flex;
+    justify-content: center;
+}
+
+.opening,
+.Loading{
+    position: absolute;
+    top:0;
+    background-color: var(--color-black);
+    padding:20px;
+    width:450px;
+    height: 100vh;
+    margin:auto;
+}
+
+.opening{
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Loading{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--color-white);
+}
+
+.spot-light{ 
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color:var(--color-white);
+    animation: spotLightMove 10s forwards;
+}
+
+.opening-img{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+}
+
+.opening-img.hide{
+    visibility: hidden;
+}
+
+@keyframes spotLightMove {
+    0%{
+        transform: none;
+    }10%{
+        transform: translateX(400px);
+    }20%{
+        transform:translate(200px,600px); ;
+    }30%{
+        transform:translate(0,300px);
+    }40%{
+        transform: translate(170px,0px);
+    }50%{
+        transform: translate(170px,300px);
+    }60%{
+        transform: translate(170px,300px) scale(0.5);
+    }80%{
+        transform: translate(170px,300px) scale(2.5);
+    }100%{
+        transform: translate(170px,300px) scale(0);
+    }
+}
+
+.logo{
+    margin-bottom:20px;
+    width: 280px;
+    height: 280px;
+}
+
+.loading__text{
+    font-size:18px;
+    font-weight: bold;
+}
+
+.start-btn button{
+    font-weight: bold;
+    font-size:24px;
+    background-color: transparent;
+    border:3px solid var(--color-black);
+    border-radius: 8px;
+    cursor: pointer;
+}
