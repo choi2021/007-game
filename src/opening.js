@@ -1,7 +1,6 @@
 const opening = document.querySelector(".opening");
 const openingImg = document.querySelector(".opening-img");
 const bgSound = new Audio("music/James bond theme.mp3");
-bgSound.play();
 setTimeout(() => {
     openingImg.classList.remove("hide");
 }, 4400)
