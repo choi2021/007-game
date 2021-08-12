@@ -24,7 +24,7 @@ game.setFinish((reason) => {
             if (reason == "lose") {
                 text = "You lost😥😥"
             } else {
-                text="Time out🤪🤪"
+                text="Time out🤪🤪🤪🤪"
             }
             sound.playFail();
             break;
